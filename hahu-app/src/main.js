@@ -1,9 +1,18 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import { createRouter, createWebHistory } from "vue-router";
 
-import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/css/bootstrap.css";
 
-const app = createApp(App)
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    { path: "/", component: OpenPage },
+    { path: "/offers", IngatlanKinalat },
+  ],
+});
 
-import 'bootstrap/dist/js/bootstrap'
-app.mount('#app')
+const app = createApp(App);
+app.use(router);
+import "bootstrap/dist/js/bootstrap";
+app.mount("#app");
