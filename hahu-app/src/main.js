@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import "bootstrap/dist/css/bootstrap.css";
 import OpenPage from './components/OpenPage.vue';
 import IngatlanKinalat from './components/IngatlanKinalat.vue';
+import UjHirdetes from './components/UjHirdetes.vue';
 
 import VueGoodTablePlugin from 'vue-good-table-next';
 
@@ -18,6 +19,7 @@ const router = createRouter({
     routes: [
         { path: "/", component: OpenPage },
         { path: "/offers", component: IngatlanKinalat },
+        { path: "/newad", component: UjHirdetes },
     ],
 });
 
